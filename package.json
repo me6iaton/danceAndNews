@@ -3,11 +3,21 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "coffee app.coffee"
   },
   "dependencies": {
-    "express": "3.0.6",
-    "jade": "*"
+    "async": "0.1.x",
+    "connect-mongodb": "1.1.x",
+    "coffee-script":"1.4.x",
+    "express": "3.0.x",
+    "gm": "1.8.x",
+    "jade": "0.28.x",
+    "mongoose": "3.5.x",
+    "passport": "0.1.x",
+    "passport-vkontakte": "0.1.x",
+    "request": "2.x",
+    "socket.io": "0.9.x",
+    "step": "x"
   },
   "engines": {
     "node": "0.8.x",
