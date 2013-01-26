@@ -2,7 +2,7 @@
 (function() {
   var socket;
 
-  socket = io.connect('http://localhost');
+  socket = io.connect(window.location.hostname);
 
   socket.on('news', function(data) {
     console.log(data);

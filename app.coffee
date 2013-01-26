@@ -7,12 +7,25 @@ user = require './routes/user'
 http = require 'http'
 path = require 'path'
 io = require 'socket.io'
+mongoose = require "mongoose"
+
+port = process.env.PORT || 3000
+console.log process.env.MONGOLAB_URI
+uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||'mongodb://localhost/HelloMongoose'
+mongoOptions = { db: { safe: true }}
+mongoose.connect uristring, mongoOptions, (err, res) ->
+  if err
+    console.log "ERROR connecting to: " + uristring + ". " + err
+  else
+    console.log "Succeeded connected to: " + uristring
+  return
+
 
 app = express()
 
 # CONFIGURATION
 app.configure ->
-  app.set 'port', process.env.PORT || 3000
+  app.set 'port', port
   app.set "views", "#{__dirname}/views"
   app.set 'view engine', 'jade'
   app.use express.favicon()
