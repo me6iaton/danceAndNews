@@ -11,7 +11,7 @@ mongoose = require "mongoose"
 
 port = process.env.PORT || 3000
 console.log process.env.MONGOLAB_URI
-uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||'mongodb://localhost/HelloMongoose'
+uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||'mongodb://localhost/danceAndNews'
 mongoOptions = { db: { safe: true }}
 mongoose.connect uristring, mongoOptions, (err, res) ->
   if err
@@ -38,7 +38,7 @@ app.configure ->
   app.use express.static(path.join(__dirname, 'public'))
 
 app.configure 'development', ->
-  app.use express.errorHandler { dumpExceptions: true, showStack: true }
+  app.use express.errorHandler { dumpExceptions: true, showStack: false }
 
 app.configure 'production', ->
   app.use express.errorHandler()

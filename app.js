@@ -22,7 +22,7 @@
 
   console.log(process.env.MONGOLAB_URI);
 
-  uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/HelloMongoose';
+  uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/danceAndNews';
 
   mongoOptions = {
     db: {
@@ -57,7 +57,7 @@
   app.configure('development', function() {
     return app.use(express.errorHandler({
       dumpExceptions: true,
-      showStack: true
+      showStack: false
     }));
   });
 
