@@ -66,7 +66,7 @@ io.configure ->
 
 io.sockets.on "connection", (socket) ->
   socket.emit "news",
-    hello: "world"
+    hello: process.env.MONGOLAB_URI
   socket.on "my other event", (data) ->
     console.log data
     return

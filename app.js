@@ -84,7 +84,7 @@
 
   io.sockets.on("connection", function(socket) {
     socket.emit("news", {
-      hello: "world"
+      hello: process.env.MONGOLAB_URI
     });
     socket.on("my other event", function(data) {
       console.log(data);
