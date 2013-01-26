@@ -6,6 +6,7 @@ routes = require './routes'
 user = require './routes/user'
 http = require 'http'
 path = require 'path'
+io = require 'socket.io'
 
 app = express()
 
@@ -29,10 +30,31 @@ app.configure 'development', ->
 app.configure 'production', ->
   app.use express.errorHandler()
 
+
+
 # ROUTES
 app.get '/', routes.index
 app.get '/users', user.list
 
 # SERVER
-http.createServer(app).listen app.get("port"), ->
+server = http.createServer(app)
+io = io.listen server
+server.listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")
+
+
+#Heroku won't actually allow us to use WebSockets
+#so we have to setup polling instead.
+#https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
+io.configure ->
+  io.set "transports", ["xhr-polling"]
+  io.set "polling duration", 10
+  return
+
+io.sockets.on "connection", (socket) ->
+  socket.emit "news",
+    hello: "world"
+  socket.on "my other event", (data) ->
+    console.log data
+    return
+  return
