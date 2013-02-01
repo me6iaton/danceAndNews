@@ -14,7 +14,9 @@
     "jade": "0.28.x",
     "mongoose": "3.5.x",
     "passport": "0.1.x",
-    "passport-vkontakte": "0.1.x",
+    "passport-vkontakte": "latest",
+    "passport-facebook": "latest",
+    "passport-google": "latest",
     "request": "2.x",
     "socket.io": "0.9.x",
     "step": "x"
