@@ -7,19 +7,20 @@
   },
   "dependencies": {
     "async": "0.1.x",
-    "connect-mongodb": "1.1.x",
+    "connect-mongo": "latest",
+    "connect-flash": "latest",
     "coffee-script":"1.4.x",
     "express": "3.0.x",
     "gm": "1.8.x",
     "jade": "0.28.x",
+    "mongoose-validate": "latest",
     "mongoose": "3.5.x",
     "passport": "0.1.x",
-    "passport-vkontakte": "latest",
     "passport-facebook": "latest",
-    "passport-google": "latest",
+    "passport-google-oauth": "latest",
     "request": "2.x",
     "socket.io": "0.9.x",
-    "step": "x"
+    "step": "latest"
   },
   "engines": {
     "node": "0.8.x",
