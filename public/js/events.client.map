@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "events.client.js",
+  "sourceRoot": "",
+  "sources": [
+    "events.client.coffee"
+  ],
+  "names": [],
+  "mappings": ";;AAAA;CAAA,KAAA;CAAA;CAAA,CAAA,CAAS,GAAT,CAAS,CAA0B;;CAAnC,CAQA,CAAW,MAAA,CAAX;CACC,CAAyB,EAAzB,EAAM,KAAN;CAAyB,CAAU,IAAT,CAAA;CAA1B,KAAA;CADD,CAGE,CAHS;CARX"
+}

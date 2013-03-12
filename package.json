@@ -9,8 +9,8 @@
     "async": "0.1.x",
     "connect-mongo": "latest",
     "connect-flash": "latest",
-    "coffee-script":"1.4.x",
-    "express": "3.0.x",
+    "coffee-script":"latest",
+    "express.io": "1.x.x",
     "gm": "1.8.x",
     "jade": "0.28.x",
     "mongoose-validate": "latest",
@@ -19,7 +19,6 @@
     "passport-facebook": "latest",
     "passport-google-oauth": "latest",
     "request": "2.x",
-    "socket.io": "0.9.x",
     "step": "latest"
   },
   "engines": {

@@ -1,7 +1,6 @@
 # user schema
 validate = require('mongoose-validate')
 mongoose = require("mongoose")
-findOrCreate = require('mongoose-findorcreate')
 
 Schema = mongoose.Schema
 crypto = require("crypto")
@@ -17,8 +16,6 @@ UserSchema = new Schema(
   google: {}
   facebook: {}
 )
-UserSchema.plugin(findOrCreate)
-
 # virtual attributes
 UserSchema.virtual("password").set((password) ->
   @_password = password

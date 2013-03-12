@@ -4,12 +4,12 @@ User = mongoose.model("User")
 
 module.exports = (app) ->
 	# user routes
-	users = require('../app/controllers/users')
+	users = require('../app/controllers/users.coffee')
 	app.get '/login', users.login
 	app.get '/signup', users.signup
 	app.get '/logout', users.logout
 	app.post('/users', users.create)
-#  app.post '/users', users.create
+	#  app.post '/users', users.create
 	app.get '/auth/vkontakte', passport.authenticate('vkontakte-email'
 		,{scope: ['audio','video','offline']
 		,failureRedirect: '/login'
@@ -45,8 +45,10 @@ module.exports = (app) ->
 		,failureFlash: true}
 	), users.authCallback
 
-	# user index
-	app.get '/', (req, res) ->
-		res.render "index", title: "danseAndNews"
-		return
-	return
+	# index
+	index = require('../app/controllers/index.coffee')
+	app.get '/', index.index
+
+	# events
+	events = require('../app/controllers/events.coffee')
+	app.get '/add-event', events.addEvent

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "news.js",
+  "sourceRoot": "",
+  "sources": [
+    "news.coffee"
+  ],
+  "names": [],
+  "mappings": ";;AACA;CAAA,KAAA,YAAA;CAAA;CAAA,CAAA,CAAW,IAAA,CAAX,WAAW;;CAAX,CACA,CAAW,IAAA,CAAX,EAAW;CADX"
+}

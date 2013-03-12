@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "client.js",
+  "sourceRoot": "",
+  "sources": [
+    "client.coffee"
+  ],
+  "names": [],
+  "mappings": ";;AAAA;CAAA,KAAA;CAAA;CAAA,CAAA,CAAS,GAAT,CAAS,CAA0B;;CAAnC,CAOA,EAAA,EAAM,KAAN;;CAPA,CASA,CAAuB,GAAjB,GAAiB,EAAvB;CACS,EAAR,CAAA,GAAO,IAAP;CADD,EAAuB;CATvB"
+}
