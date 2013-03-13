@@ -12,6 +12,7 @@ UserSchema = new Schema(
   avatar: String
   hashed_password: String
   salt: String
+  group: [{_id: Schema.Types.ObjectId, name: String}]
   vkontakte: {}
   google: {}
   facebook: {}
